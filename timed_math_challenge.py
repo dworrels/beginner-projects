@@ -12,6 +12,8 @@ def generate_problem():
     operator = random.choice(OPERATORS)
 
     expr = str(left) + " " + operator + " " + str(right)
+
+    # evaluate the python expression as a string and return an interger
     answer = eval(expr)
     return expr, answer 
 
@@ -35,4 +37,5 @@ total_time = round(end_time - start_time, 2)
 
 print("----------------------")
 print("Nice work! You finished in", total_time, "seconds!")
+print("You got", wrong, "Incorrect")
 
